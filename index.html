@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mobile Web OS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="shortcut icon"
+        href="https://th.bing.com/th/id/OIP.rRNYxicpQS9A4eXxkcC_LAHaHa?w=185&h=185&c=7&r=0&o=5&pid=1.7"
+        type="image/x-icon">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+
+    <div class="desktop">
+        <p><span style="color: darkblue;">Note:</span>
+            Try to resize your browser window in a portrait format (600px) to see the content. <br>
+            Because it only supports mobile size format and totally based on phone screen-size.</p>
+    </div>
+
+    <div class="webmobileos">
+        <div class="lockscreen">
+            <div id="lock" style="display: none;">
+
+                <form name="calc">
+
+                    <input type="password" placeholder="" name="ans" value="" readonly="readonly" id="textBox">
+
+                    <br>
+
+                    <div class="passlock">
+
+                        <input type="button" value="1" onclick="document.calc.ans.value+='1'">
+
+                        <input type="button" value="2" onclick="document.calc.ans.value+='2'">
+
+                        <input type="button" value="3" onclick="document.calc.ans.value+='3'">
+
+                        <br>
+
+                        <input type="button" value="4" onclick="document.calc.ans.value+='4'">
+
+                        <input type="button" value="5" onclick="document.calc.ans.value+='5'">
+
+                        <input type="button" value="6" onclick="document.calc.ans.value+='6'">
+
+                        <br>
+
+                        <input type="button" value="7" onclick="document.calc.ans.value+='7'">
+
+                        <input type="button" value="8" onclick="document.calc.ans.value+='8'">
+
+                        <input type="button" value="9" onclick="document.calc.ans.value+='9'">
+
+                        <br>
+
+                        <button type="button"
+                            onclick="document.calc.ans.value=calc.ans.value.substr(0,calc.ans.value.length-1)">
+                            <i class="material-icons" style="font-size: 16px;">backspace</i>
+                        </button>
+
+                        <input type="button" value="0" onclick="document.calc.ans.value+='0'">
+
+                        <button type="reset" class="ok"><i class="material-icons"
+                                style="font-size: 16px;">&#xe876;</i></button>
+
+                    </div>
+
+                </form>
+
+                <div class="tooltip">
+                    <i class="material-icons" style="font-size: 16px;">info</i>
+                    Check the passcode
+                    <span class="tooltiptext">
+                        Your passcode is: 2513.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <footer class="openlock">
+                <i class="material-icons" style="font-size: 30px;" title="click to open lock">clear</i>
+            </footer>
+
+        </div>
+
+        <div class="home">
+
+            <div class="part1">
+                <h1><u>"Quiz for Kids"</u></h1>
+                <div class="intrfc">
+                    <p>
+                    <ol>
+                        <li>
+                            <span style='font-size:20px;'>&#128161;</span> Complete the word <b>'ANT'</b> using the
+                            below puzzle.
+                        </li>
+                    </ol>
+                    </p>
+                    <div id="box">
+
+                        <button id="btn4">
+                            <span class="rslt1">A</span>
+                        </button>
+                
+                        <button id="btn5">
+                            <span class="rslt2">N</span>
+                        </button>
+                
+                        <button id="btn6">
+                            <span class="rslt3">T</span>
+                        </button>
+                
+                    </div>
+                
+                    <div class="ans">
+                
+                        <div class="a1">
+                            <button id="btn3" onclick="window.navigator.vibrate(200);">T</button>
+                            <button class="btn3">T</button>
+                        </div>
+                
+                        <div class="a2">
+                            <button id="btn1">A</button>
+                            <button class="btn1">A</button>
+                        </div>
+                
+                        <div class="a3">
+                            <button id="btn2" onclick="window.navigator.vibrate(200);">N</button>
+                            <button class="btn2">N</button>
+                        </div>
+                
+                    </div>
+                
+                    <div class="wlc">
+                        <p> You have successfully solve the puzzle.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="part2">
+                <div class="one">
+                    <p>one</p>
+                    <div id="one">One is a first numerical number.</div>
+                </div>
+
+                <div class="two">
+                    <p>two</p>
+                    <div id="two">Two is a second numerical number.</div>
+                </div>
+
+                <div class="three">
+                    <p>three</p>
+                    <div id="three">Three is a third numerical number.</div>
+                </div>
+
+                <div class="four">
+                    <p>four</p>
+                    <div id="four">Four is a fourth numerical number.</div>
+                </div>
+
+                <div class="five">
+                    <p>five</p>
+                    <div id="five">Five is a fifth numerical number.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

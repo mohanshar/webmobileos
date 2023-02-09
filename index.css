@@ -1,0 +1,420 @@
+div.desktop {
+    display: inline;
+    color: rgb(22, 184, 130);
+    padding: 8px 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: rgb(36, 61, 131);
+}
+
+div.webmobileos {
+    display: none;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (max-width: 600px) and (orientation:portrait) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-family: "Lucida Sans", sans-serif;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        background: rgb(48, 44, 77);
+        color: #fff;
+    }
+
+    div.desktop {
+        display: none;
+    }
+
+    div.webmobileos {
+        display: inline;
+    }
+
+    div.lockscreen {
+        text-align: center;
+    }
+
+    div.lockscreen h2 {
+        padding: 20px;
+    }
+
+    div.passlock {
+        background-color: rgba(2, 2, 2, 0.2);
+        backdrop-filter: blur(5px);
+        color: #fff;
+        width: 50%;
+        border-radius: 25px;
+        border: 1px solid blueviolet;
+        border-bottom: 1px solid rgb(109, 86, 235);
+        margin-left: none;
+        margin-right: none;
+        left: 0;
+        right: 0;
+        display: inline-block;
+    }
+
+    input[type=button],
+    button[type=reset],
+    button[type=button] {
+        background-color: rgba(5, 5, 5, 0.5);
+        backdrop-filter: blur(5px);
+        color: #fff;
+        padding: 18px;
+        border: 1px solid rgb(109, 86, 235);
+        border-bottom: 1px solid blueviolet;
+        outline: none;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 10px;
+        border-radius: 25%;
+    }
+
+    input[type=button]:active,
+    button[type=reset]:active,
+    button[type=button]:active {
+        background-color: #777;
+    }
+
+    input[type=password] {
+        background-color: rgba(4, 4, 4, 0.5);
+        backdrop-filter: blur(5px);
+        color: #fff;
+        padding: 15px;
+        border: 1px solid blueviolet;
+        border-bottom: 1px solid rgb(109, 86, 235);
+        outline: none;
+        width: 40%;
+        border-radius: 25px;
+        margin-top: 85px;
+        margin-left: none;
+        margin-right: none;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 15px;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    input::placeholder {
+        color: #fff;
+    }
+
+    div.lockscreen footer {
+        position: absolute;
+        bottom: 0;
+        margin-left: none;
+        margin-right: none;
+        left: 0;
+        right: 0;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        margin-top: 10%;
+        cursor: pointer;
+        font-size: 14px;
+        color: darkorange;
+    }
+
+    .tooltip .tooltiptext {
+        cursor: text;
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+
+        /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    div.home {
+        display: none;
+        font-size: 16px;
+        color: lightblue;
+        padding: 10px;
+    }
+
+    /* div.part1 {
+        display: inline;
+    } */
+
+    div.part2 {
+        margin-top: 65%;
+    }
+
+    div.one,
+    div.two,
+    div.three,
+    div.four,
+    div.five {
+        width: 100px;
+        height: 100px;
+        margin: 10px 12px;
+        padding: 8px 5px;
+        text-align: center;
+        float: left;
+    }
+
+    div.one p,
+    div.two p,
+    div.three p,
+    div.four p,
+    div.five p {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: mediumpurple;
+        color: #fff;
+        font-weight: bolder;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 0;
+        border-top: 1px solid lightblue;
+        border-left: 3px double lightskyblue;
+        border-bottom: 1px solid lightblue;
+        border-right: 2px double lightskyblue;
+    }
+
+    div.one div#one,
+    div.two div#two,
+    div.three div#three,
+    div.four div#four,
+    div.five div#five {
+        display: none;
+        padding: 10px;
+        cursor: pointer;
+        background-color: darkslateblue;
+        color: lightblue;
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        font-size: 15px;
+        border-top: 1px solid rgb(12, 31, 37);
+        border-left: 3px double lightskyblue;
+        border-bottom: 1px solid rgb(24, 27, 27);
+        border-right: 2px double lightskyblue;
+    }
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        float: none;
+    }
+
+    h1 {
+        color: mediumpurple;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+
+    div#box {
+        background-color: darkseagreen;
+        padding: 5px;
+        margin-top: 5%;
+        height: 100px;
+        text-align: center;
+        position: absolute;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    div.ans {
+        position: absolute;
+        text-align: center;
+        margin-top: 31.5%;
+        text-align: center;
+        padding: 12px 10px;
+        background-color: slateblue;
+        width: 78%;
+        height: 200%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    div.wlc {
+        padding: 10px 12px;
+        background-color: rgb(8, 174, 230);
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        width: 77%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: 49.5%;
+        display: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    div.ans div.a1 {
+        background-color: mediumpurple;
+        height: 40px;
+        width: 35px;
+        /* padding: 2px 2px; */
+        float: left;
+        margin-left: 50px;
+        margin-right: auto;
+    }
+
+    div.ans div.a2 {
+        background-color: mediumpurple;
+        height: 40px;
+        width: 36px;
+        /* padding: 2px 2px; */
+        float: left;
+        margin-left: 40px;
+        margin-right: auto;
+    }
+
+    div.ans div.a3 {
+        background-color: mediumpurple;
+        height: 40px;
+        width: 38.2px;
+        /* padding: 2px 2px; */
+        float: left;
+        margin-left: 40px;
+        margin-right: auto;
+    }
+
+    #btn1,
+    #btn2,
+    #btn3 {
+        background-color: darkslateblue;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 30px;
+        float: left;
+        padding: 6px 10px;
+    }
+
+    .btn1,
+    .btn2,
+    .btn3 {
+        background-color: darkslateblue;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 30px;
+        display: none;
+        float: left;
+        padding: 6px 10px;
+    }
+
+    #btn1:active,
+    #btn2:active,
+    #btn3:active,
+    .btn1:active,
+    .btn2:active,
+    .btn3:active {
+        font-size: 25px;
+    }
+
+    .rslt1,
+    .rslt2,
+    .rslt3 {
+        display: none;
+        font-size: 30px;
+    }
+
+    #btn4,
+    #btn5,
+    #btn6 {
+        background-color: darkslateblue;
+        color: #fff;
+        border: none;
+        outline: none;
+        transform: translate(-5px, 35px);
+        height: 40px;
+        width: 40px;
+    }
+
+    li {
+        color: #bbb;
+    }
+
+    .intrfc {
+        position: absolute;
+    }
+
+}
