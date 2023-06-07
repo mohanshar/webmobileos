@@ -27,7 +27,7 @@
     </div>
 
     <div class="webmobileos">
-        <div class="lockscreen">
+        <!-- <div class="lockscreen">
             <div id="lock" style="display: none;">
 
                 <form name="calc">
@@ -86,14 +86,19 @@
 
             </div>
 
-
+            
             <footer class="openlock">
                 <i class="material-icons" style="font-size: 30px;" title="click to open lock">clear</i>
             </footer>
 
-        </div>
+        </div> -->
 
         <div class="home">
+
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+              </div>
 
             <div class="part1">
                 <h1><u>"Quiz for Kids"</u></h1>
@@ -111,36 +116,36 @@
                         <button id="btn4">
                             <span class="rslt1">A</span>
                         </button>
-                
+
                         <button id="btn5">
                             <span class="rslt2">N</span>
                         </button>
-                
+
                         <button id="btn6">
                             <span class="rslt3">T</span>
                         </button>
-                
+
                     </div>
-                
+
                     <div class="ans">
-                
+
                         <div class="a1">
                             <button id="btn3" onclick="window.navigator.vibrate(200);">T</button>
                             <button class="btn3">T</button>
                         </div>
-                
+
                         <div class="a2">
                             <button id="btn1">A</button>
                             <button class="btn1">A</button>
                         </div>
-                
+
                         <div class="a3">
                             <button id="btn2" onclick="window.navigator.vibrate(200);">N</button>
                             <button class="btn2">N</button>
                         </div>
-                
+
                     </div>
-                
+
                     <div class="wlc">
                         <p> You have successfully solve the puzzle.</p>
                     </div>
