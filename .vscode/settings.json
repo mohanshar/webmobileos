@@ -1,6 +1,7 @@
 {
     "liveServer.settings.port": 5501,
     "cSpell.words": [
+        "iframes",
         "intrfc",
         "lockscreen",
         "opac",
@@ -8,6 +9,7 @@
         "passcode",
         "passlock",
         "rslt",
+        "screenlock",
         "tooltiptext",
         "webmobileos"
     ]

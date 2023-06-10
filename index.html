@@ -21,18 +21,48 @@
 <body>
 
     <div class="desktop">
-        <p><span style="color: darkblue;">Note:</span>
+        <p>
+            <span style="color: darkblue;">Note:</span>
             Try to resize your browser window in a portrait format (600px) to see the content. <br>
-            Because it only supports mobile size format and totally based on phone screen-size.</p>
+            Because it only supports mobile size format and totally based on phone screen-size.
+        </p>
     </div>
 
     <div class="webmobileos">
-        <div class="lockscreen">
+        <div class="lockscreen" style="display:none;">
+
+            <div class="time">
+
+                <div id="myClock" class="clock-screenlock" title="know your current time"></div><br>
+
+                <p id="date">
+                    <script>
+                        var d = new Date();
+                        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        document.getElementById("date").innerHTML = months[d.getMonth()].split('-')[0];
+                    </script>
+                    <script>
+                        document.write(new Date().getDate()).split('-')[0];
+                    </script>,
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                </p>
+
+                <p id="Day"></p>
+                <script>
+                    var d = new Date();
+                    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    document.getElementById("Day").innerHTML = days[d.getDay()];
+                </script>
+            </div>
+
             <div id="lock" style="display: none;">
 
                 <form name="calc">
 
-                    <input type="password" placeholder="" name="ans" value="" readonly="readonly" id="textBox">
+                    <input type="password" maxlength="4" pattern="[0-9]{4}" name="ans" readonly="readonly"
+                        id="passcodeInput">
 
                     <br>
 
@@ -69,39 +99,111 @@
 
                         <input type="button" value="0" onclick="document.calc.ans.value+='0'">
 
-                        <button type="reset" class="ok"><i class="material-icons">&#xe876;</i></button>
+                        <button type="reset" class="ok">
+                            <i class="material-icons">&#xe876;</i>
+                        </button>
 
                     </div>
 
                 </form>
 
                 <div class="tooltip">
-                    <i class="material-icons" style="font-size: 16px;">info</i>
+                    <i class="material-icons"
+                        style="font-size:16px;position:absolute;margin-bottom:200px;margin-left:-18px;">info</i>
                     Check the passcode
                     <span class="tooltiptext">
-                        Your passcode is: 2513.
+                        Your passcode is: 2222.
                     </span>
                 </div>
 
             </div>
 
-
             <footer class="openlock">
-                <i class="material-icons" style="font-size: 30px;" title="click to open lock">clear</i>
+                <i class="material-icons" style="
+                font-size:30px;
+                font-weight:bold;
+                max-width: auto;
+                " title="click to open lock">keyboard_arrow_up</i>
             </footer>
 
         </div>
 
         <div class="home">
 
-            <div class="alert">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <strong>Greetings!</strong> Welcome to the brand new Browser-based Mobile Operating System.
+            <div class="bg">
+                <img src="https://images.pexels.com/photos/2449605/pexels-photo-2449605.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
             </div>
 
-        </div>
+            <!-- <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Greetings!</strong> Welcome to the brand new Browser-based webmobileos.
+            </div> -->
 
-    </div>
+            <div id="myClock1" class="clock-top"></div>
+            <div class="name">webmobileos<div>
+                    <span class="drag-notification"><i class="material-icons">drag_handle</i></span>
+
+                    <i class="material-icons" id="all_apps" style="font-size: 35px;">keyboard_arrow_up</i>
+
+                    <div class="apps">
+
+                        <!-- <div class="app">
+                            <a href="https://www.google.com/" target="_blank">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                                    alt="">
+                                <p>Google</p>
+                            </a>
+                        </div> -->
+
+                        <div class="app">
+                            <script async src="https://cse.google.com/cse.js?cx=a075f9ce1383141cf">
+                            </script>
+                            <div class="gcse-search"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="frame">
+                        <iframe src="" title="app preview" frameborder="0" name="youtube" height="300px" width="100%">
+                            <p>Your browser does not support iframes.</p>
+                        </iframe>
+                        <a href="https://tiktok.com/" target="youtube">youtube</a>
+                        </p>
+                    </div>
 </body>
 
 </html>
+
+<script>
+    function showTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+
+        var session = "AM";
+
+        if (h == 0) {
+            h = 12;
+        }
+
+        if (h > 12) {
+            h = h - 12;
+
+            var session = "PM"
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+
+        var time = h + " : " + m + " " + session;
+
+        document.getElementById("myClock").innerText = time;
+        document.getElementById("myClock").innerContent = time;
+        document.getElementById("myClock1").innerText = time;
+        document.getElementById("myClock1").innerContent = time;
+
+        setTimeout(showTime, 1000);
+    }
+    showTime();
+</script>

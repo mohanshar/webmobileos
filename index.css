@@ -1,175 +1,214 @@
 div.desktop {
-    display: inline;
-    color: rgb(22, 184, 130);
-    padding: 8px 5px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    background-color: rgb(36, 61, 131);
+  display: inline;
+  color: rgb(22, 184, 130);
+  padding: 8px 5px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color: rgb(36, 61, 131);
 }
 
 div.webmobileos {
-    display: none;
+  display: none;
 }
 
 /* Smartphone Portrait and Landscape */
-@media only screen and (max-width: 600px) and (orientation:portrait) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-    html {
-        font-family: "Lucida Sans", sans-serif;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
-    }
+  html {
+    font-family: "Lucida Sans", sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-    body {
-        background: rgb(48, 44, 77);
-        color: #fff;
-    }
+  body {
+    background: rgb(48, 44, 77);
+    color: #fff;
+  }
 
-    div.desktop {
-        display: none;
-    }
+  div.desktop {
+    display: none;
+  }
 
-    div.webmobileos {
-        display: inline;
-    }
+  div.webmobileos {
+    display: inline;
+  }
 
-    div.lockscreen {
-        text-align: center;
-    }
+  div.lockscreen {
+    text-align: center;
+  }
 
-    div.lockscreen h2 {
-        padding: 20px;
-    }
+  div.lockscreen h2 {
+    padding: 20px;
+  }
 
-    div.passlock {
-        background-color: rgba(2, 2, 2, 0.2);
-        backdrop-filter: blur(5px);
-        color: #fff;
-        width: 90%;
-        margin: 0 auto;
-        border-radius: 25px;
-        border: 1px solid blueviolet;
-        border-bottom: 1px solid rgb(109, 86, 235);
-        /* display: inline-block; */
-    }
+  div.time {
+    /* margin-top: 100px; */
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    background: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
 
-    input[type=button],
-    button[type=reset],
-    button[type=button] {
-        background-color: rgba(5, 5, 5, 0.5);
-        backdrop-filter: blur(5px);
-        color: #fff;
-        padding: 18px;
-        border: 1px solid rgb(109, 86, 235);
-        border-bottom: 1px solid blueviolet;
-        outline: none;
-        font-size: 14px;
-        font-weight: bold;
-        margin: 10px;
-        border-radius: 25%;
-    }
-    
-    .material-icons {
-        font-size: 12px;
-        padding: 0;
-    }
+  div.clock-screenlock {
+    font-size: 40px;
+    color: #fff;
+    padding: 10px;
+  }
 
-    input[type=button]:active,
-    button[type=reset]:active,
-    button[type=button]:active {
-        background-color: #777;
-    }
+  div.lock {
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    input[type=password] {
-        background-color: rgba(4, 4, 4, 0.5);
-        backdrop-filter: blur(5px);
-        color: #fff;
-        padding: 15px;
-        border: 1px solid blueviolet;
-        border-bottom: 1px solid rgb(109, 86, 235);
-        outline: none;
-        width: 80%;
-        border-radius: 25px;
-        margin-top: 50px;
-        margin-left: none;
-        margin-right: none;
-        left: 0;
-        right: 0;
-        text-align: center;
-        margin-bottom: 5px;
-        display: inline-block;
-        font-size: 16px;
-    }
+  div.passlock {
+    background-color: rgba(2, 2, 2, 0.2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    max-width: fit-content;
+    margin: 0 auto;
+    border-radius: 25px;
+    border: 1px solid blueviolet;
+    border-bottom: 1px solid rgb(109, 86, 235);
+    /* display: inline-block; */
+  }
 
-    input::placeholder {
-        color: #fff;
-    }
+  input[type="button"],
+  button[type="reset"],
+  button[type="button"] {
+    background-color: rgba(5, 5, 5, 0.5);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 18px;
+    border: 1px solid rgb(109, 86, 235);
+    border-bottom: 1px solid blueviolet;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px;
+    border-radius: 25%;
+  }
 
-    div.lockscreen footer {
-        position: absolute;
-        bottom: 0;
-        margin-left: none;
-        margin-right: none;
-        left: 0;
-        right: 0;
-        padding: 8px;
-        cursor: pointer;
-    }
+  .material-icons {
+    font-size: 12px;
+  }
 
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        margin-top: 10%;
-        cursor: pointer;
-        font-size: 14px;
-        color: darkorange;
-    }
+  input[type="button"]:active,
+  button[type="reset"]:active,
+  button[type="button"]:active {
+    background-color: #777;
+  }
 
-    .tooltip .tooltiptext {
-        cursor: text;
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        position: absolute;
-        z-index: 1;
-        bottom: 100%;
-        left: 50%;
-        margin-left: -60px;
+  input[type="password"] {
+    background-color: rgba(4, 4, 4, 0.5);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 15px;
+    border: 1px solid blueviolet;
+    border-bottom: 1px solid rgb(109, 86, 235);
+    outline: none;
+    max-width: fit-content;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-left: none;
+    margin-right: none;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+  }
 
-        /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-        opacity: 0;
-        transition: opacity 1s;
-    }
+  input::placeholder {
+    color: #fff;
+  }
 
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-    }
+  div.lockscreen footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: none;
+    margin-right: none;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    cursor: pointer;
+  }
 
-    div.home {
-        display: none;
-        font-size: 16px;
-        color: lightblue;
-        padding: 10px;
-    }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: 15%;
+    margin-left: none;
+    margin-right: none;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    color: darkorange;
+  }
 
-}
+  .tooltip .tooltiptext {
+    cursor: text;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(80, 5, 5);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
 
-.alert {
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  div.home {
+    /* display: none; */
+    font-size: 16px;
+    color: lightblue;
+    padding: 10px;
+    background: none;
+  }
+
+  .alert {
     padding: 20px;
     background-color: rgb(36, 61, 131);
     color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10% 10% 10% 10%;
+    border-radius: 25px;
+    border: 1px solid blueviolet;
+    border-bottom: 1px solid rgb(109, 86, 235);
   }
-  
+
   .closebtn {
     margin-left: 15px;
     color: white;
@@ -180,7 +219,100 @@ div.webmobileos {
     cursor: pointer;
     transition: 0.3s;
   }
-  
+
   .closebtn:hover {
     color: black;
   }
+
+  div.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+
+  div.bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+  }
+
+  div.clock-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    min-width: 50%;
+    min-height: 3%;
+    background-color: rgba(187, 59, 238, 0.301);
+    backdrop-filter: blur(5px);
+    color: #95cef0;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: bold;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  div.name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: right;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: bold;
+  }
+
+  span.drag-notification {
+    position: fixed;
+    top: 18px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    color: aliceblue;
+  }
+
+  i#all_apps {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    text-align: center;
+    margin-top: 10em;
+    font-weight: bold;
+    color: azure;
+    cursor: pointer;
+  }
+
+  div.apps div.app {
+    margin-top: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.frame iframe {
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+  }
+}
