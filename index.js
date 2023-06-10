@@ -1,15 +1,26 @@
-// window.onbeforeunload = function () {
-//     return 'Reload';
-// }
+window.onbeforeunload = function () {
+    return 'Reload';
+}
 
 
 $(document).ready(function () {
-
+    
     $('.openlock').on("click", function () {
         $('.openlock').slideUp(1500);
         $('.time').fadeOut(1000);
         $('#lock').slideDown(1000);
     });
+
+    $('.drag-notification').click(function () {
+        $('.notification').slideToggle(800);
+    });
+
+    $('#all_apps').click(function () {
+        $('.apps').slideToggle(800);
+    });
+
+
+
     
 
     // $('.ok').on("click", function () {
