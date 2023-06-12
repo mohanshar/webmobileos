@@ -1,6 +1,6 @@
-// window.onbeforeunload = function () {
-//     return 'Reload';
-// }
+window.onbeforeunload = function () {
+    return 'Reload';
+}
 
 
 $(document).ready(function () {

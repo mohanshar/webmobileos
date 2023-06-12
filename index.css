@@ -190,7 +190,7 @@ div.webmobileos {
   }
 
   div.home {
-    /* display: none; */
+    display: none;
     font-size: 16px;
     color: lightblue;
     padding: 10px;
@@ -324,8 +324,8 @@ div.webmobileos {
     color: aliceblue;
     font-weight: bold;
     background-color: #7e3e03c2;
-    margin-top: 27px;
-    height: 87%;
+    margin-top: 31px;
+    height: 84%;
     width: 90%;
     border-radius: 20px;
     backdrop-filter: blur(5px);
@@ -365,7 +365,7 @@ div.webmobileos {
     margin-right: auto;
     right: 0;
     position: fixed;
-    top: 30px;
+    top: 33px;
     padding: 8px;
     text-align: left;
     color: aliceblue;
