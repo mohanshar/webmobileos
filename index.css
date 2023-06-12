@@ -93,18 +93,18 @@ div.webmobileos {
     background-color: rgba(5, 5, 5, 0.5);
     backdrop-filter: blur(5px);
     color: #fff;
-    padding: 18px;
+    padding: 16px;
     border: 1px solid rgb(109, 86, 235);
     border-bottom: 1px solid blueviolet;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin: 8px;
     border-radius: 25%;
   }
 
   .material-icons {
-    font-size: 14px;
+    font-size: 12px;
     max-width: min-content;
   }
 
@@ -124,8 +124,8 @@ div.webmobileos {
     outline: none;
     max-width: fit-content;
     border-radius: 25px;
-    margin-top: 50px;
-    margin-bottom: 5px;
+    margin-top: 100px;
+    /* margin-bottom: 5px; */
     margin-left: none;
     margin-right: none;
     left: 0;
@@ -190,7 +190,7 @@ div.webmobileos {
   }
 
   div.home {
-    display: none;
+    /* display: none; */
     font-size: 16px;
     color: lightblue;
     padding: 10px;
@@ -324,23 +324,19 @@ div.webmobileos {
     color: aliceblue;
     font-weight: bold;
     background-color: #7e3e03c2;
-    margin-top: 26px;
-    height: 88%;
+    margin-top: 27px;
+    height: 87%;
     width: 90%;
     border-radius: 20px;
     backdrop-filter: blur(5px);
     z-index: 3;
   }
 
-  div.all-apps i#all_apps {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  div.notification p {
+    font-size: 14px;
+    color: rgb(243, 221, 196);
     padding: 5px;
-    color: azure;
-    cursor: pointer;
+    text-align: left;
   }
 
   div.search {
@@ -350,6 +346,18 @@ div.webmobileos {
     margin-right: auto;
   }
 
+  div.all-apps i#all_apps {
+    position: fixed;
+    /* bottom: 0; */
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 5px;
+    color: azure;
+    cursor: pointer;
+  }
+
   div.all-apps div.apps {
     display: none;
     left: 0;
@@ -357,29 +365,32 @@ div.webmobileos {
     margin-right: auto;
     right: 0;
     position: fixed;
-    top: 35px;
+    top: 30px;
     padding: 8px;
     text-align: left;
     color: aliceblue;
     background-color: #7e3e03c2;
-    height: 84.5%;
-    width: 90%;
+    height: 84%;
+    width: 92%;
     border-radius: 20px;
     backdrop-filter: blur(5px);
   }
 
   div.all-apps div.apps div.app {
     display: inline-block;
-    margin: 5px;
+    margin: 0;
+    left: auto;
+    right: auto;
+    margin: 3px;
     padding: 5px;
     text-align: center;
-    color: aliceblue;
     background-color: #ffffff;
     border-radius: 10px;
-    border: 2px solid rgb(109, 86, 235);
     cursor: pointer;
-    width: 23%;
+    width: 20%;
+    border-radius: 10px;
   }
+
   div.all-apps div.apps div.app a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -387,7 +398,12 @@ div.webmobileos {
   }
 
   div.all-apps div.apps div.app a img{
-    height: 30px;
-    width: 30px;
+    height: 23px;
+    width: 25px;
+  }
+
+  div.all-apps div.apps div.app a p{ 
+    color: rgb(6, 36, 63);
+    font-size: 13px;
   }
 }

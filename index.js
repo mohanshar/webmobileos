@@ -1,6 +1,6 @@
-window.onbeforeunload = function () {
-    return 'Reload';
-}
+// window.onbeforeunload = function () {
+//     return 'Reload';
+// }
 
 
 $(document).ready(function () {
@@ -16,7 +16,7 @@ $(document).ready(function () {
     });
 
     $('#all_apps').click(function () {
-        $('.apps').slideToggle(800);
+        $('.apps').fadeToggle();
     });
 
 
