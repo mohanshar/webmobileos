@@ -348,8 +348,8 @@ div.webmobileos {
 
   div.all-apps i#all_apps {
     position: fixed;
-    /* bottom: 0; */
-    bottom: 25px;
+    bottom: 0;
+    /* bottom: 25px; */
     left: 0;
     right: 0;
     margin: auto;
