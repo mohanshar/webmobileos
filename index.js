@@ -5,23 +5,28 @@ window.onbeforeunload = function () {
 
 $(document).ready(function () {
     
-    $('.openlock').on("click", function () {
-        $('.openlock').slideUp(1500);
+    $('#openlock').on("click", function () {
+        $('#openlock').slideUp(1500);
         $('.time').fadeOut(1000);
         $('#lock').slideDown(1000);
     });
 
     $('.drag-notification').click(function () {
-        $('.notification').slideToggle(800);
+        $('.notification').slideDown(800);
+        $('#apps').fadeOut();
+    });
+
+    $('#bell').click(function () {
+        $('.notification').slideUp(800);
+        $('#apps').fadeOut();
     });
 
     $('#all_apps').click(function () {
-        $('.apps').fadeToggle();
+        $('#apps').fadeToggle();
+        $('.notification').slideUp(800);
     });
 
 
-
-    
 
     // $('.ok').on("click", function () {
     //     $('.del').hide();
