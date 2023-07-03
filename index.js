@@ -1,6 +1,6 @@
-window.onbeforeunload = function () {
-    return 'Reload';
-}
+// window.onbeforeunload = function () {
+//     return 'Reload';
+// }
 
 
 $(document).ready(function () {
@@ -11,19 +11,26 @@ $(document).ready(function () {
         $('#lock').slideDown(1000);
     });
 
-    $('.drag-notification').click(function () {
+    $('#drag-notification').click(function () {
         $('.notification').slideDown(800);
         $('#apps').fadeOut();
+        $('#drag-notification').fadeOut();
     });
 
-    $('#bell').click(function () {
+    $('#close_apps').click(function () {
         $('.notification').slideUp(800);
         $('#apps').fadeOut();
+        $('#drag-notification').fadeIn(800);
     });
 
-    $('#all_apps').click(function () {
-        $('#apps').fadeToggle();
-        $('.notification').slideUp(800);
+    $('#open_apps').click(function () {
+        $('#apps').fadeToggle(150);
+        // $('.notification').slideUp(800);
+    });
+
+    $('#settings_link').click(function () {
+        $('.settings').fadeToggle(150);
+        // $('.notification').slideUp(800);
     });
 
 
